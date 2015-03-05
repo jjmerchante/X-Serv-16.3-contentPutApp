@@ -57,6 +57,10 @@ class contentApp (webapp.webApp):
             httpCode = "200 OK"
             htmlBody = "<html><body>" + self.content[resource] \
                 + "</body></html>"
+        else:
+            httpCode = "404 Not Found"
+            htmlBody = "Not Found"
+            
         return (httpCode, htmlBody)
 
 
